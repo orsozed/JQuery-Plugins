@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+      "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Unit Test</title>
+    <link rel="stylesheet" href="../styles/qunit.css" type="text/css" />
+    <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+    <script src="../scripts/qunit.js" type="text/javascript"></script>
+    <script src="../scripts/jquery.log.debug.js" type="text/javascript"></script>
+    <script src="../scripts/jquery.sleep.debug.js" type="text/javascript"></script>
+    <script src="../scripts/jquery.stopwatch.debug.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        var sleep = function ( milliseconds ) {
+            $.sleep(milliseconds);
+        };
+
+        var asyncMethod = function(callback) {
+            $.sleep(500);
+            callback();
+        };
+        
+        var callbackMethod = function() {
+            $.sleep(500);
+        };
+        
+        test("manually time a function", function () {
+            window.console = {
+                log: function (format, message) {
+                    equal(message, "MANUAL: 1000ms", "message passed in matched");
+                    start();
+                }
+            };
+            stop();
+            
+            var stopwatch = new $.stopwatch('MANUAL');
+            stopwatch.start();
+            $.sleep(1000);
+            stopwatch.stop();
+        });
+        
+        test("automatically time a function", function () {
+            window.console = {
+                log: function (format, message) {
+                    equal(message, "AUTO: 1000ms", "message passed in matched");
+                    start();
+                }
+            };
+            stop();
+            
+            sleep = new $.stopwatch('AUTO', sleep);
+            sleep(1000);
+        });
+            
+        test("manually time an async method", function () {
+            window.console = {
+                log: function (format, message) {
+                    equal(message, "ASYNC: 1000ms", "message passed in matched");
+                    start();
+                }
+            };
+            stop();
+            
+            var stopwatch = new $.stopwatch('ASYNC');
+            stopwatch.start();
+            asyncMethod(callbackMethod);
+            stopwatch.stop();
+        });
+
+    </script>
+</head>
+<body>
+    <h1 id="qunit-header">Unit Tests</h1>
+    <h2 id="qunit-banner"></h2>
+    <h2 id="qunit-userAgent"></h2>
+    <ol id="qunit-tests"></ol>
+    
+    <div id="#content"></div>
+</body>
+</html>
