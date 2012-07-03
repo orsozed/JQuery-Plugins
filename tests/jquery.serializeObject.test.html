@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+      "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Unit Tests</title>
+    <link rel="stylesheet" href="../styles/qunit.css" type="text/css" />
+    <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+    <script src="../scripts/qunit.js" type="text/javascript"></script>
+    <script src="../scripts/jquery.serializeObject.debug.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        test("serialize form", function () {
+            var person = $('#form-person').serializeObject();
+            var expected = { 
+                                FirstName: 'JOHN',
+                                LastName: 'DOE',
+                                Age: '0-18'
+                           };
+            deepEqual(person, expected, 'objects match');
+        });
+
+    </script>
+</head>
+<body>
+    <h1 id="qunit-header">Unit Tests</h1>
+    <h2 id="qunit-banner"></h2>
+    <h2 id="qunit-userAgent"></h2>
+    <ol id="qunit-tests"></ol>
+    
+    <div id="#content"></div>
+    
+    <form id="form-person" action="" style="display:none;">
+        <label for="FirstName">First Name:</label>
+        <input type="text" name="FirstName" id="FirstName" value="JOHN" size="75" />
+        
+        <label for="LastName">Last Name:</label>
+        <input type="text" name="LastName" id="LastName" value="DOE" size="75" />
+        
+        <label for="Age">Age:</label>
+        <select name="Age">
+			<option selected="selected">0-18</option>
+			<option>18-30</option>
+			<option>30-65</option>
+			<option>65+</option>
+		</select>
+    </form>
+</body>
+</html>
