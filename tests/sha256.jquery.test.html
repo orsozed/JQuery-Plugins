@@ -3,12 +3,13 @@
 <html>
 <head>
     <title>Unit Tests</title>
-    <link rel="stylesheet" href="../styles/qunit.css" type="text/css" />
+    <link rel="stylesheet" href="styles/qunit.css" type="text/css" />
     <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
-    <script src="../scripts/qunit.js" type="text/javascript"></script>
-    <script src="../scripts/jquery.log.debug.js" type="text/javascript"></script>
-    <script src="../scripts/jquery.stopwatch.debug.js" type="text/javascript"></script>
-    <script src="../scripts/jquery.sha256.debug.js" type="text/javascript"></script>
+    <script src="scripts/qunit.js" type="text/javascript"></script>
+    
+    <!-- plugin under test -->
+    <script src="../plugins/sha256.jquery.debug.js" type="text/javascript"></script>
+    
     <script type="text/javascript">
 
         test("string encode test", function () {

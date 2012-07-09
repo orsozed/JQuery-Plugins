@@ -1,0 +1,35 @@
+{
+    "name": "sleep",
+    "version": "1.0.0",
+    "title": "Sleep Plugin",
+    "author": {
+        "name": "Jacob Bair",
+        "url": "https://github.com/orsozed"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://raw.github.com/orsozed/JQuery-Plugins/master/license/MIT-LICENSE.txt"
+        },
+        {
+            "type": "GPLv2",
+            "url": "https://raw.github.com/orsozed/JQuery-Plugins/master/license/GPL-LICENSE.txt"
+        }
+    ],
+    "dependencies": {
+    	"jquery": ">=1.6",
+    },
+    "description": "This plug-in allows you lock-up the javascript thread for the specified amount of time - used for diagnostics, not for production.",
+    "keywords": [
+        "sleep",
+        "busy wait",
+        "lock-up"
+    ],
+    "homepage": "https://github.com/orsozed/JQuery-Plugins",
+    "maintainers": [
+        {
+            "name": "Jacob Bair",
+            "url": "https://github.com/orsozed"
+        }
+    ]
+}

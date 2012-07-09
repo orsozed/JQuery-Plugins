@@ -1,0 +1,33 @@
+{
+    "name": "log",
+    "version": "1.0.0",
+    "title": "Log Plugin",
+    "author": {
+        "name": "Jacob Bair",
+        "url": "https://github.com/orsozed"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://raw.github.com/orsozed/JQuery-Plugins/master/license/MIT-LICENSE.txt"
+        },
+        {
+            "type": "GPLv2",
+            "url": "https://raw.github.com/orsozed/JQuery-Plugins/master/license/GPL-LICENSE.txt"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.6",
+    },
+    "description": "This plug-in allows you to safely write to the console",
+    "keywords": [
+        "console"
+    ],
+    "homepage": "https://github.com/orsozed/JQuery-Plugins",
+    "maintainers": [
+        {
+            "name": "Jacob Bair",
+            "url": "https://github.com/orsozed"
+        }
+    ]
+}

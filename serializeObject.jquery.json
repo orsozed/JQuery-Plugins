@@ -1,0 +1,36 @@
+{
+    "name": "serializeObject",
+    "version": "1.0.0",
+    "title": "serializeObject Plugin",
+    "author": {
+        "name": "Jacob Bair",
+        "url": "https://github.com/orsozed"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://raw.github.com/orsozed/JQuery-Plugins/master/license/MIT-LICENSE.txt"
+        },
+        {
+            "type": "GPLv2",
+            "url": "https://raw.github.com/orsozed/JQuery-Plugins/master/license/GPL-LICENSE.txt"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.6",
+    },
+    "description": "This plug-in allows you to serialize the content of a form into a javascript object with named property pairs.",
+    "keywords": [
+        "form",
+        "serialization",
+        "json",
+        "name-value"
+    ],
+    "homepage": "https://github.com/orsozed/JQuery-Plugins",
+    "maintainers": [
+        {
+            "name": "Jacob Bair",
+            "url": "https://github.com/orsozed"
+        }
+    ]
+}

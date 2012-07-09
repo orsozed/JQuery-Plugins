@@ -3,12 +3,19 @@
 <html>
 <head>
     <title>Unit Test</title>
-    <link rel="stylesheet" href="../styles/qunit.css" type="text/css" />
+    <link rel="stylesheet" href="styles/qunit.css" type="text/css" />
     <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
-    <script src="../scripts/qunit.js" type="text/javascript"></script>
-    <script src="../scripts/jquery.log.debug.js" type="text/javascript"></script>
-    <script src="../scripts/jquery.sleep.debug.js" type="text/javascript"></script>
-    <script src="../scripts/jquery.stopwatch.debug.js" type="text/javascript"></script>
+    <script src="scripts/qunit.js" type="text/javascript"></script>
+    
+    <!-- plugin dependencies -->
+    <script src="../plugins/log.jquery.debug.js" type="text/javascript"></script>
+    
+    <!-- test dependencies -->
+    <script src="../plugins/sleep.jquery.debug.js" type="text/javascript"></script>
+    
+    <!-- plugin under test -->
+    <script src="../plugins/stopwatch.jquery.debug.js" type="text/javascript"></script>
+    
     <script type="text/javascript">
 
         var sleep = function ( milliseconds ) {
