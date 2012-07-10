@@ -1,0 +1,6 @@
+{
+    "username":"orsozed",
+    "project":"JQuery-Plugins",
+    "branch":"master",
+    "plugins":["log.jquery.json","sha256.jquery.json"]
+}

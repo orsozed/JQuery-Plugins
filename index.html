@@ -7,7 +7,14 @@
     <meta name="description" content="Jquery-plugins : " />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="scripts/log.jquery.debug.js"></script>
+    <script type="text/javascript" src="scripts/pluginBrowser.jquery.debug.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+       $('#pluginBrowser').pluginBrowser('manifest.json'); 
+    });
+    </script>
     <title>Jquery-plugins</title>
   </head>
 
@@ -35,12 +42,7 @@
 
 <p>This project contains a list of plugins that were developed to assist in JQuery development.</p>
 
-<pre><code>log.jquery.debug.js
-serializeObject.jquery.debug.js
-sha256.jquery.debug.js
-sleep.jquery.debug.js
-stopwatch.jquery.debug.js
-</code></pre>
+<div id="pluginBrowser"></div>
       </section>
     </div>
 
